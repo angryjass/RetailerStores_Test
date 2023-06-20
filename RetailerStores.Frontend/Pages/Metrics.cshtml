@@ -1,0 +1,23 @@
+﻿@page
+@model MetricsModel
+@{
+    ViewData["Title"] = "Metrics";
+}
+
+<div class="charts">
+    <div class="chart" style="margin-right: 10px"><canvas id="totalStockChart"></canvas></div>
+    <div class="chart"><canvas id="stockAccuracyChart"></canvas></div>
+</div>
+<div class="charts">
+    <div class="chart" style="margin-right: 10px"><canvas id="stockOnFloorAvailabilityChart"></canvas></div>
+    <div class="chart"><canvas id="stockMeanAgeChart"></canvas></div>
+</div>
+
+@section Scripts {
+    <script>
+        @Html.Raw(Model.TotalStockChart.CreateChartCode("totalStockChart"));
+        @Html.Raw(Model.StockAccuracyChart.CreateChartCode("stockAccuracyChart"));
+        @Html.Raw(Model.StockOnFloorAvailabilityChart.CreateChartCode("stockOnFloorAvailabilityChart"));
+        @Html.Raw(Model.StockMeanAgeChart.CreateChartCode("stockMeanAgeChart"));
+    </script>
+}

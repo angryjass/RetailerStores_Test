@@ -1,0 +1,71 @@
+﻿@page
+@model EditStoreModel
+@{
+}
+
+<h4>Edit Store</h4>
+@Html.ValidationSummary()
+<form method="post">
+    @Html.HiddenFor(a => a.Store.Id)
+    @Html.HiddenFor(a => a.Store.Manager.Id)
+    <table class="table">
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.Name)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.CountryCode)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.CountryCode)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.StoreEmail)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.StoreEmail)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.Manager.FirstName)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Manager.FirstName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.Manager.LastName)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Manager.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.Manager.Email)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Manager.Email)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.DisplayNameFor(a => a.Store.Manager.Category)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Manager.Category)
+            </td>
+        </tr>
+    </table>
+    <a class="btn btn-secondary" asp-page="/Stores">Back</a>
+    <button class="btn btn-success" type="submit">Save</button>
+</form>

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RetailerStores.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:RetailerStores.WebApi.Controllers.MetricsController.GetTotalStock(System.Threading.CancellationToken)">
+            <summary>
+            Get metrics total stock
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.MetricsController.GetStockAccuracy(System.Threading.CancellationToken)">
+            <summary>
+            Get accuracy metrics
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.MetricsController.GetStockOnFloorAvailability(System.Threading.CancellationToken)">
+            <summary>
+            Get on-floor-availability metrics
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.MetricsController.GetStockMeanAge(System.Threading.CancellationToken)">
+            <summary>
+            Get mean age metrics
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StocksController.Get(RetailerStores.Application.Stocks.Queries.GetStockQuery,System.Threading.CancellationToken)">
+            <summary>
+            Get stock
+            </summary>
+            <param name="query"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StocksController.Post(RetailerStores.Application.Stocks.Commands.CreateStockCommand,System.Threading.CancellationToken)">
+            <summary>
+            Create stock
+            </summary>
+            <param name="command"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StoresController.Get(RetailerStores.Application.Stores.Queries.GetStoreQuery,System.Threading.CancellationToken)">
+            <summary>
+            Get store by Id
+            </summary>
+            <param name="query"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StoresController.GetList(RetailerStores.Application.Stores.Queries.GetStoreListQuery,System.Threading.CancellationToken)">
+            <summary>
+            Get list of stores
+            </summary>
+            <param name="query"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StoresController.Post(RetailerStores.Application.Stores.Commands.CreateStoreCommand,System.Threading.CancellationToken)">
+            <summary>
+            Create store
+            </summary>
+            <param name="command"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RetailerStores.WebApi.Controllers.StoresController.Put(RetailerStores.Application.Stores.Commands.UpdateStoreCommand,System.Threading.CancellationToken)">
+            <summary>
+            Update store
+            </summary>
+            <param name="command"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RetailerStores.WebApi.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:RetailerStores.WebApi.Migrations.FillData">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.FillData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.FillData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RetailerStores.WebApi.Migrations.FillData.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

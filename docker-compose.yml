@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+
+  backend:
+    container_name: 'retailer-stores-backend'
+    image: 'retailer-stores-backend'
+    build:
+      context: .
+      dockerfile: retailer-stores-backend.dockerfile
+    ports:
+     - "8080:8080"
+    depends_on:
+     - "postgres"
+    networks:
+      - retailer-stores-network
+      
+  frontend:
+    container_name: 'retailer-stores-frontend'
+    image: 'retailer-stores-frontend'
+    build:
+      dockerfile: Dockerfile
+      context: RetailerStores.Frontend/
+    ports:
+     - "8081:8081"
+    depends_on:
+     - "backend"
+    networks:
+      - retailer-stores-network
+      
+
+  postgres:
+    container_name: 'postgres'
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - retailer-stores-network
+
+networks:
+  retailer-stores-network:
+    driver: bridge

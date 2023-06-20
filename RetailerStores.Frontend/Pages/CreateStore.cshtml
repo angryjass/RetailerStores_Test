@@ -1,0 +1,68 @@
+﻿@page
+@model RetailerStores.Frontend.Pages.CreateStoreModel
+@{
+}
+<h4>Create Store</h4>
+@Html.ValidationSummary()
+<form method="post">
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Name)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.CountryCode)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.CountryCode)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.StoreEmail)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.StoreEmail)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.ManagerFirstName)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.ManagerFirstName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.ManagerLastName)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.ManagerLastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.ManagerEmail)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.ManagerEmail)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.ManagerCategory)
+            </td>
+            <td>
+                @Html.EditorFor(a => a.Store.ManagerCategory)
+            </td>
+        </tr>
+    </table>
+    <a class="btn btn-secondary" asp-page="/Stores">Back</a>
+    <button class="btn btn-success" type="submit">Save</button>
+</form>

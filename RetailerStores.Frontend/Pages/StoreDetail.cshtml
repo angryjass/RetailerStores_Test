@@ -1,0 +1,147 @@
+﻿@page
+@model RetailerStores.Frontend.Pages.StoreDetailModel
+@{
+}
+
+<div>
+    <h4>Store</h4>
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Id)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.CountryCode)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.CountryCode)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.StoreEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.StoreEmail)
+            </td>
+        </tr>
+    </table>
+    <h4>Manager</h4>
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Manager.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Manager.Id)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Manager.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Manager.FirstName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Manager.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Manager.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(a => a.Store.Manager.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(a => a.Store.Manager.Email)
+            </td>
+        </tr>
+    </table>
+    @if (Model.Stock == null)
+    {
+        <h4 style="margin-bottom: 100px">No Stock info.You can <a class="btn btn-info" asp-page="./CreateStock" asp-route-id="@Model.Store.Id">add it</a></h4>
+    }
+    else
+    {
+        <h4>
+            Stock info on date @Html.DisplayName(new string(Model.Stock.RecordingDate.ToLocalTime().ToString("dd-MM-yyyy HH:mm:ss")))
+            <a class="btn btn-info" style="float:right" asp-page="./CreateStock" asp-route-id="@Model.Store.Id">Add Stock Info</a>
+        </h4>
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.Id)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Frontstock)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.Frontstock)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Backstock)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.Backstock)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.ShoppingWindow)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.ShoppingWindow)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Accuracy)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.Accuracy)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.OnFloorAvailability)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.OnFloorAvailability)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.MeanAge)
+                </td>
+                <td>
+                    @Html.DisplayFor(a => a.Stock.MeanAge)
+                </td>
+            </tr>
+        </table>
+    }
+    <a class="btn btn-secondary" asp-page="/Stores">Back</a>
+</div>

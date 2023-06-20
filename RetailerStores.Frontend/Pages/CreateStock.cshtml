@@ -1,0 +1,70 @@
+﻿@page
+@model RetailerStores.Frontend.Pages.CreateStockModel
+@{
+}
+
+<h4>Create Stock</h4>
+@Html.ValidationSummary()
+<form method="post">
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Frontstock)
+                </td>
+                <td>
+                    @Html.EditorFor(a => a.Stock.Frontstock)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(a => a.Stock.Backstock)
+                </td>
+
+                <td>
+                    @Html.EditorFor(a => a.Stock.Backstock)
+                </td>
+
+            <tr>
+                <td>
+                        @Html.DisplayNameFor(a => a.Stock.ShoppingWindow)
+                </td>
+                <td>
+                        @Html.EditorFor(a => a.Stock.ShoppingWindow)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        @Html.DisplayNameFor(a => a.Stock.Accuracy)
+                </td>
+                <td>
+                        @Html.EditorFor(a => a.Stock.Accuracy)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        @Html.DisplayNameFor(a => a.Stock.OnFloorAvailability)
+                </td>
+                <td>
+                        @Html.EditorFor(a => a.Stock.OnFloorAvailability)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        @Html.DisplayNameFor(a => a.Stock.MeanAge)
+                </td>
+                <td>
+                        @Html.EditorFor(a => a.Stock.MeanAge)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        @Html.DisplayName("Store")
+                </td>
+                <td>
+                    <select name="Stock.StoreId" asp-items="Model.Stores"></select>
+                </td>
+            </tr>
+    </table>
+    <a class="btn btn-secondary" href="@ViewData["Referer"]">Back</a>
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
